@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
+    <q-header elevated class="bg-red">
       <q-toolbar>
         <q-btn
           flat
@@ -12,10 +12,10 @@
         />
 
         <q-toolbar-title>
-          Quasar App
+          <img alt="Quasar logo" src="https://logodownload.org/wp-content/uploads/2014/04/McDonalds-logo.png" class="image absolute-center">
         </q-toolbar-title>
 
-        <div>Quasar v{{ $q.version }}</div>
+        <q-btn size="16.5px" flat round icon="local_offer"  />
       </q-toolbar>
     </q-header>
 
@@ -45,6 +45,12 @@
     </q-page-container>
   </q-layout>
 </template>
+
+<style scoped>
+  .image {
+    width: 8%;
+  }
+</style>
 
 <script>
 import EssentialLink from 'components/EssentialLink.vue'
