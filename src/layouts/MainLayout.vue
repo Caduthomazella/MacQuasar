@@ -23,19 +23,20 @@
       v-model="leftDrawerOpen"
       show-if-above
       bordered
-      content-class="bg-grey-1"
+      content-class="bg-black"
     >
       <q-list>
         <q-item-label
           header
-          class="text-grey-8"
+          class="text-white"
         >
-          Essential Links
+          Menu
         </q-item-label>
         <EssentialLink
           v-for="link in essentialLinks"
           :key="link.title"
           v-bind="link"
+          class="text-white"
         />
       </q-list>
     </q-drawer>
@@ -57,46 +58,84 @@ import EssentialLink from 'components/EssentialLink.vue'
 
 const linksData = [
   {
-    title: 'Docs',
-    caption: 'quasar.dev',
+    title: 'Home',
+    icon: 'home',
+    link: 'https://quasar.dev'
+  },
+  {
+    title: 'McDelivery',
+    icon: 'local_shipping',
+    link: 'https://quasar.dev'
+  },
+  {
+    title: 'My Orders',
+    icon: 'shopping_bag',
+    link: 'https://quasar.dev'
+  },
+  {
+    title: 'Cupons',
+    icon: 'money',
+    link: 'https://quasar.dev'
+  },
+  {
+    title: 'My Coupons',
+    icon: 'payments',
+    link: 'https://quasar.dev'
+  },
+  {
+    title: 'Stickers',
+    icon: 'sticky_note_2',
+    link: 'https://quasar.dev'
+  },
+  {
+    title: 'Gift Card',
+    icon: 'card_giftcard',
+    link: 'https://quasar.dev'
+  },
+  {
+    title: 'Restaurantes',
+    icon: 'restaurant',
+    link: 'https://quasar.dev'
+  },
+  {
+    title: 'Menu',
+    icon: 'restaurant_menu',
+    link: 'https://quasar.dev'
+  },
+  {
+    title: 'McExperiencia',
+    icon: 'chat',
+    link: 'https://quasar.dev'
+  },
+  {
+    title: 'Méqui Sem Fila',
+    icon: 'sports_handball',
+    link: 'https://quasar.dev'
+  },
+  {
+    title: 'QR Code',
+    icon: 'qr_code',
+    link: 'https://quasar.dev'
+  },
+  {
+    title: 'Profile',
+    icon: 'person',
+    link: 'https://quasar.dev'
+  },
+  {
+    title: 'Configurações',
+    icon: 'brightness_high',
+    link: 'https://quasar.dev'
+  },
+  {
+    title: 'Institucional',
     icon: 'school',
     link: 'https://quasar.dev'
   },
   {
-    title: 'Github',
-    caption: 'github.com/quasarframework',
-    icon: 'code',
-    link: 'https://github.com/quasarframework'
-  },
-  {
-    title: 'Discord Chat Channel',
-    caption: 'chat.quasar.dev',
-    icon: 'chat',
-    link: 'https://chat.quasar.dev'
-  },
-  {
-    title: 'Forum',
-    caption: 'forum.quasar.dev',
-    icon: 'record_voice_over',
-    link: 'https://forum.quasar.dev'
-  },
-  {
-    title: 'Twitter',
-    caption: '@quasarframework',
-    icon: 'rss_feed',
-    link: 'https://twitter.quasar.dev'
-  },
-  {
-    title: 'Facebook',
-    caption: '@QuasarFramework',
-    icon: 'public',
-    link: 'https://facebook.quasar.dev'
-  },
-  {
-    title: 'Quasar Awesome',
-    caption: 'Community Quasar projects',
-    icon: 'favorite',
-    link: 'https://awesome.quasar.dev'
+    title: 'Sobre App',
+    icon: 'info',
+    link: 'https://quasar.dev'
   }
 ]
 
