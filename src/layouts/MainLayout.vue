@@ -12,7 +12,7 @@
         />
 
         <q-toolbar-title>
-          <img alt="Quasar logo" src="https://logodownload.org/wp-content/uploads/2014/04/McDonalds-logo.png" class="image absolute-center">
+          <img alt="Quasar logo" src="../assets/logo.png" class="image absolute-center">
         </q-toolbar-title>
 
         <q-btn size="16.5px" flat round icon="local_offer"  />
@@ -20,26 +20,175 @@
     </q-header>
 
     <q-drawer
-      v-model="leftDrawerOpen"
-      show-if-above
-      bordered
-      content-class="bg-black"
-    >
-      <q-list>
-        <q-item-label
-          header
-          class="text-white"
-        >
-          Menu
-        </q-item-label>
-        <EssentialLink
-          v-for="link in essentialLinks"
-          :key="link.title"
-          v-bind="link"
-          class="text-white"
-        />
-      </q-list>
-    </q-drawer>
+        v-model="leftDrawerOpen"
+        show-if-above
+        :width="240"
+        :breakpoint="500"
+      >
+        <q-scroll-area class="fit">
+          <q-list padding class="menu-list text-white bg-black all-pointer-events q-pt-xl">
+            <q-item to="/" clickable v-ripple exact class="active" active-class="text-yellow-7">
+              <q-item-section avatar>
+                <q-icon name="home" />
+              </q-item-section>
+
+              <q-item-section>
+                Home
+              </q-item-section>
+            </q-item>
+
+            <q-item to="/mcdelivery" clickable v-ripple exact >
+              <q-item-section avatar>
+                <q-icon name="local_shipping" />
+              </q-item-section>
+
+              <q-item-section>
+                McDelivery
+              </q-item-section>
+            </q-item>
+
+            <q-item to="/myorders" clickable v-ripple exact active-class="text-yellow-7">
+              <q-item-section avatar>
+                <q-icon name="shopping_bag" />
+              </q-item-section>
+
+              <q-item-section>
+                My Orders
+              </q-item-section>
+            </q-item>
+
+            <q-item to="/cupons" clickable v-ripple exact active-class="text-yellow-7">
+              <q-item-section avatar>
+                <q-icon name="money" />
+              </q-item-section>
+
+              <q-item-section>
+                Cupons
+              </q-item-section>
+            </q-item>
+
+            <q-item to="/mycupons" clickable v-ripple exact active-class="text-yellow-7">
+              <q-item-section avatar>
+                <q-icon name="payments" />
+              </q-item-section>
+
+              <q-item-section>
+                My Cupons
+              </q-item-section>
+            </q-item>
+
+            <q-item to="/stickers" clickable v-ripple exact active-class="text-yellow-7">
+              <q-item-section avatar>
+                <q-icon name="sticky_note_2" />
+              </q-item-section>
+
+              <q-item-section>
+                Stickers
+              </q-item-section>
+            </q-item>
+
+            <q-item to="/giftcard" clickable v-ripple exact active-class="text-yellow-7">
+              <q-item-section avatar>
+                <q-icon name="card_giftcard" />
+              </q-item-section>
+
+              <q-item-section>
+                Gift Card
+              </q-item-section>
+            </q-item>
+
+            <q-item to="/restaurant" clickable v-ripple exact active-class="text-yellow-7">
+              <q-item-section avatar>
+                <q-icon name="restaurant" />
+              </q-item-section>
+
+              <q-item-section>
+                Restaurantes
+              </q-item-section>
+            </q-item>
+
+            <q-item to="/menu" clickable v-ripple exact active-class="text-yellow-7">
+              <q-item-section avatar>
+                <q-icon name="restaurant_menu" />
+              </q-item-section>
+
+              <q-item-section>
+                Menu
+              </q-item-section>
+            </q-item>
+
+            <q-item to="/mcxp" clickable v-ripple exact active-class="text-yellow-7">
+              <q-item-section avatar>
+                <q-icon name="chat" />
+              </q-item-section>
+
+              <q-item-section>
+                McExperiencia
+              </q-item-section>
+            </q-item>
+
+            <q-item to="/mequisemfila" clickable v-ripple exact active-class="text-yellow-7">
+              <q-item-section avatar>
+                <q-icon name="sports_handball" />
+              </q-item-section>
+
+              <q-item-section>
+                Méqui Sem Fila
+              </q-item-section>
+            </q-item>
+
+            <q-item to="/qrcode" clickable v-ripple exact active-class="text-yellow-7">
+              <q-item-section avatar>
+                <q-icon name="qr_code" />
+              </q-item-section>
+
+              <q-item-section>
+                QR Code
+              </q-item-section>
+            </q-item>
+
+            <q-item to="/profile" clickable v-ripple exact active-class="text-yellow-7">
+              <q-item-section avatar>
+                <q-icon name="person" />
+              </q-item-section>
+
+              <q-item-section>
+                Profile
+              </q-item-section>
+            </q-item>
+
+            <q-item to="/config" clickable v-ripple exact active-class="text-yellow-7">
+              <q-item-section avatar>
+                <q-icon name="brightness_high" />
+              </q-item-section>
+
+              <q-item-section>
+                Configurações
+              </q-item-section>
+            </q-item>
+
+            <q-item to="/institucional" clickable v-ripple exact active-class="text-yellow-7">
+              <q-item-section avatar>
+                <q-icon name="school" />
+              </q-item-section>
+
+              <q-item-section>
+                Institucional
+              </q-item-section>
+            </q-item>
+
+            <q-item to="/about" clickable v-ripple exact active-class="text-yellow-7">
+              <q-item-section avatar>
+                <q-icon name="info" />
+              </q-item-section>
+
+              <q-item-section>
+                About App
+              </q-item-section>
+            </q-item> <!-- FINAL ITEMS -->
+          </q-list>
+        </q-scroll-area>
+      </q-drawer>
 
     <q-page-container>
       <router-view />
@@ -51,101 +200,19 @@
   .image {
     width: 8%;
   }
+  .active {
+    border-left: 5px solid #FDD835;
+  }
 </style>
 
 <script>
-import EssentialLink from 'components/EssentialLink.vue'
-
-const linksData = [
-  {
-    title: 'Home',
-    icon: 'home',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'McDelivery',
-    icon: 'local_shipping',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'My Orders',
-    icon: 'shopping_bag',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Cupons',
-    icon: 'money',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'My Coupons',
-    icon: 'payments',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Stickers',
-    icon: 'sticky_note_2',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Gift Card',
-    icon: 'card_giftcard',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Restaurantes',
-    icon: 'restaurant',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Menu',
-    icon: 'restaurant_menu',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'McExperiencia',
-    icon: 'chat',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Méqui Sem Fila',
-    icon: 'sports_handball',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'QR Code',
-    icon: 'qr_code',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Profile',
-    icon: 'person',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Configurações',
-    icon: 'brightness_high',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Institucional',
-    icon: 'school',
-    link: 'https://quasar.dev'
-  },
-  {
-    title: 'Sobre App',
-    icon: 'info',
-    link: 'https://quasar.dev'
-  }
-]
 
 export default {
   name: 'MainLayout',
-  components: { EssentialLink },
   data () {
     return {
       leftDrawerOpen: false,
-      essentialLinks: linksData
+      active: true
     }
   }
 }
