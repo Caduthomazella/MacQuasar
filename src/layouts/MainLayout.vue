@@ -27,7 +27,7 @@
       >
         <q-scroll-area class="fit">
           <q-list padding class="menu-list text-white bg-black all-pointer-events q-pt-xl">
-            <q-item to="/" clickable v-ripple exact class="active" active-class="text-yellow-7">
+            <q-item to="/" clickable v-ripple exact active-class="text-yellow-7 active">
               <q-item-section avatar>
                 <q-icon name="home" />
               </q-item-section>
@@ -37,7 +37,7 @@
               </q-item-section>
             </q-item>
 
-            <q-item to="/mcdelivery" clickable v-ripple exact >
+            <q-item to="/mcdelivery" clickable v-ripple exact active-class="text-yellow-7 active">
               <q-item-section avatar>
                 <q-icon name="local_shipping" />
               </q-item-section>
@@ -47,7 +47,7 @@
               </q-item-section>
             </q-item>
 
-            <q-item to="/myorders" clickable v-ripple exact active-class="text-yellow-7">
+            <q-item to="/myorders" clickable v-ripple exact active-class="text-yellow-7 active">
               <q-item-section avatar>
                 <q-icon name="shopping_bag" />
               </q-item-section>
@@ -57,7 +57,7 @@
               </q-item-section>
             </q-item>
 
-            <q-item to="/cupons" clickable v-ripple exact active-class="text-yellow-7">
+            <q-item to="/cupons" clickable v-ripple exact active-class="text-yellow-7 active">
               <q-item-section avatar>
                 <q-icon name="money" />
               </q-item-section>
@@ -67,7 +67,7 @@
               </q-item-section>
             </q-item>
 
-            <q-item to="/mycupons" clickable v-ripple exact active-class="text-yellow-7">
+            <q-item to="/mycupons" clickable v-ripple exact active-class="text-yellow-7 active">
               <q-item-section avatar>
                 <q-icon name="payments" />
               </q-item-section>
@@ -77,7 +77,7 @@
               </q-item-section>
             </q-item>
 
-            <q-item to="/stickers" clickable v-ripple exact active-class="text-yellow-7">
+            <q-item to="/stickers" clickable v-ripple exact active-class="text-yellow-7 active">
               <q-item-section avatar>
                 <q-icon name="sticky_note_2" />
               </q-item-section>
@@ -87,7 +87,7 @@
               </q-item-section>
             </q-item>
 
-            <q-item to="/giftcard" clickable v-ripple exact active-class="text-yellow-7">
+            <q-item to="/giftcard" clickable v-ripple exact active-class="text-yellow-7 active">
               <q-item-section avatar>
                 <q-icon name="card_giftcard" />
               </q-item-section>
@@ -97,7 +97,7 @@
               </q-item-section>
             </q-item>
 
-            <q-item to="/restaurant" clickable v-ripple exact active-class="text-yellow-7">
+            <q-item to="/restaurant" clickable v-ripple exact active-class="text-yellow-7 active">
               <q-item-section avatar>
                 <q-icon name="restaurant" />
               </q-item-section>
@@ -107,7 +107,7 @@
               </q-item-section>
             </q-item>
 
-            <q-item to="/menu" clickable v-ripple exact active-class="text-yellow-7">
+            <q-item to="/menu" clickable v-ripple exact active-class="text-yellow-7 active">
               <q-item-section avatar>
                 <q-icon name="restaurant_menu" />
               </q-item-section>
@@ -117,7 +117,7 @@
               </q-item-section>
             </q-item>
 
-            <q-item to="/mcxp" clickable v-ripple exact active-class="text-yellow-7">
+            <q-item to="/mcxp" clickable v-ripple exact active-class="text-yellow-7 active">
               <q-item-section avatar>
                 <q-icon name="chat" />
               </q-item-section>
@@ -127,7 +127,7 @@
               </q-item-section>
             </q-item>
 
-            <q-item to="/mequisemfila" clickable v-ripple exact active-class="text-yellow-7">
+            <q-item to="/mequisemfila" clickable v-ripple exact active-class="text-yellow-7 active">
               <q-item-section avatar>
                 <q-icon name="sports_handball" />
               </q-item-section>
@@ -137,7 +137,7 @@
               </q-item-section>
             </q-item>
 
-            <q-item to="/qrcode" clickable v-ripple exact active-class="text-yellow-7">
+            <q-item to="/qrcode" clickable v-ripple exact active-class="text-yellow-7 active">
               <q-item-section avatar>
                 <q-icon name="qr_code" />
               </q-item-section>
@@ -147,7 +147,7 @@
               </q-item-section>
             </q-item>
 
-            <q-item to="/profile" clickable v-ripple exact active-class="text-yellow-7">
+            <q-item to="/profile" clickable v-ripple exact active-class="text-yellow-7 active">
               <q-item-section avatar>
                 <q-icon name="person" />
               </q-item-section>
@@ -157,7 +157,7 @@
               </q-item-section>
             </q-item>
 
-            <q-item to="/config" clickable v-ripple exact active-class="text-yellow-7">
+            <q-item to="/config" clickable v-ripple exact active-class="text-yellow-7 active">
               <q-item-section avatar>
                 <q-icon name="brightness_high" />
               </q-item-section>
@@ -167,7 +167,7 @@
               </q-item-section>
             </q-item>
 
-            <q-item to="/institucional" clickable v-ripple exact active-class="text-yellow-7">
+            <q-item to="/institucional" clickable v-ripple exact active-class="text-yellow-7 active">
               <q-item-section avatar>
                 <q-icon name="school" />
               </q-item-section>
@@ -177,7 +177,7 @@
               </q-item-section>
             </q-item>
 
-            <q-item to="/about" clickable v-ripple exact active-class="text-yellow-7">
+            <q-item to="/about" clickable v-ripple exact active-class="text-yellow-7 active">
               <q-item-section avatar>
                 <q-icon name="info" />
               </q-item-section>
@@ -201,7 +201,9 @@
     width: 8%;
   }
   .active {
-    border-left: 5px solid #FDD835;
+    border-left: 4px solid #FDD835;
+    font-weight: bolder;
+    font-size: medium;
   }
 </style>
 
